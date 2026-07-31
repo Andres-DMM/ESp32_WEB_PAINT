@@ -65,14 +65,14 @@ const char* password = "YOUR_WIFI_PASSWORD";
 
 
 
-## 2. Flash the Firmware
+### 2. Flash the Firmware
 Select board: Tools > Board > ESP32 Arduino > ESP32 Dev Module.
 
 Select the appropriate COM Port.
 
 Hit Upload.
 
-## 3. Connect & Paint
+### 3. Connect & Paint
 Open the Serial Monitor (115200 baud rate).
 
 Wait for the ESP32 to connect to WiFi. The assigned IP address will display on both the Serial Monitor and the GC9A01A LCD.
@@ -99,5 +99,5 @@ JSON
     [125, 128]
   ]
 }
-## 📜 License
+### 📜 License
 Distributed under the MIT License. Feel free to modify and use it in your own micro-controller projects!
