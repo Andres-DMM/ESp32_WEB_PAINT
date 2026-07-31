@@ -69,7 +69,8 @@ Hit Upload.
 ### 3. Connect & PaintOpen the Serial Monitor (115200 baud rate).Wait for the ESP32 to connect to WiFi.
 The assigned IP address will display on both the Serial Monitor and the GC9A01A LCD.
 Open any modern browser on a phone or desktop connected to the same WiFi network and navigate to:Plaintexthttp://<ESP32-IP-ADDRESS>
-### 4. Start drawing!📡 API Endpoint OverviewEndpointMethodDescription/GETServes the HTML/CSS/JS frontend canvas app./drawPOSTAccepts JSON payload containing color, line width, and array of $(x, y)$ coordinates./clearPOSTClears the display screen with solid black background.Payload Example (POST /draw)JSON{
+### 4. 
+Start drawing!📡 API Endpoint OverviewEndpointMethodDescription/GETServes the HTML/CSS/JS frontend canvas app./drawPOSTAccepts JSON payload containing color, line width, and array of $(x, y)$ coordinates./clearPOSTClears the display screen with solid black background.Payload Example (POST /draw)JSON{
   "color": "#ff0055",
   "size": 5,
   "points": [
