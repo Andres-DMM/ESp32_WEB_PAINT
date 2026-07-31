@@ -29,7 +29,7 @@ This project turns an ESP32 microcontroller and a GC9A01A round LCD display into
 
 ## 🔌 Wiring Diagram
 
-Connect your GC9A01A module to the ESP32 using the standard Hardware SPI pins:
+Connect your GC9A01A module to the ESP32 using standard Hardware SPI pins:
 
 | GC9A01A Pin | ESP32 Pin | Notes |
 | :--- | :--- | :--- |
@@ -59,38 +59,17 @@ Install the following dependencies through the **Arduino IDE Library Manager** (
 ### 1. Configure WiFi Credentials
 Open the code in Arduino IDE and update the network credentials with your local WiFi details:
 
-```cpp
 const char* ssid     = "YOUR_WIFI_SSID";
 const char* password = "YOUR_WIFI_PASSWORD";
 
-
-
-### 2. Flash the Firmware
-Select board: Tools > Board > ESP32 Arduino > ESP32 Dev Module.
-
+### 2. 
+Flash the FirmwareSelect board: Tools > Board > ESP32 Arduino > ESP32 Dev Module.
 Select the appropriate COM Port.
-
 Hit Upload.
-
-### 3. Connect & Paint
-Open the Serial Monitor (115200 baud rate).
-
-Wait for the ESP32 to connect to WiFi. The assigned IP address will display on both the Serial Monitor and the GC9A01A LCD.
-
-Open any modern browser on a phone or desktop connected to the same WiFi network and navigate to:
-
-Plaintext
-http://<ESP32-IP-ADDRESS>
-Start drawing!
-
-📡 API Endpoint Overview
-Endpoint	Method	Description
-/	GET	Serves the HTML/CSS/JS frontend canvas app.
-/draw	POST	Accepts JSON payload containing color, line width, and array of (x,y) coordinates.
-/clear	POST	Clears the display screen with solid black background.
-Payload Example (POST /draw)
-JSON
-{
+# 3. Connect & PaintOpen the Serial Monitor (115200 baud rate).Wait for the ESP32 to connect to WiFi.
+The assigned IP address will display on both the Serial Monitor and the GC9A01A LCD.
+Open any modern browser on a phone or desktop connected to the same WiFi network and navigate to:Plaintexthttp://<ESP32-IP-ADDRESS>
+# 4. Start drawing!📡 API Endpoint OverviewEndpointMethodDescription/GETServes the HTML/CSS/JS frontend canvas app./drawPOSTAccepts JSON payload containing color, line width, and array of $(x, y)$ coordinates./clearPOSTClears the display screen with solid black background.Payload Example (POST /draw)JSON{
   "color": "#ff0055",
   "size": 5,
   "points": [
@@ -99,5 +78,6 @@ JSON
     [125, 128]
   ]
 }
-### 📜 License
-Distributed under the MIT License. Feel free to modify and use it in your own micro-controller projects!
+# 📜 LicenseDistributed under the MIT License. Feel free to modify and use it in your own micro-controller projects!
+
+
